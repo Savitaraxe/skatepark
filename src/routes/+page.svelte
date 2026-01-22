@@ -73,35 +73,49 @@
 </script>
 
 <svelte:head>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Raleway:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 </svelte:head>
 
+
 <div class="min-h-screen bg-white">
-  <!-- Navigation -->
-  <nav style="background: #1a1a1a; position: fixed; width: 100%; top: 0; z-index: 50;">
-    <div style="max-width: 100%; margin: 0 auto; padding: 0 70px;">
-      <div style="display: flex; justify-content: left-aligned; align-items: left-aligned; height: 50px; gap: 20px;">
-        <!-- Desktop Navigation - Left aligned -->
-      <a href="/" style="color: #F7F7F7; font-size: 14px; font-weight: 400; text-decoration: none; font-family: 'Raleway', sans-serif; line-height: 50px;">Home</a>
-      <a href="/skateparks" style="color: #F7F7F7; font-size: 14px; font-weight: 400; text-decoration: none; font-family: 'Raleway', sans-serif; line-height: 50px;">Skateparks</a>
-      <a href="/resources" style="color: #F7F7F7; font-size: 14px; font-weight: 400; text-decoration: none; font-family: 'Raleway', sans-serif; line-height: 50px;">Resources</a>
-      <a href="/design-builders" style="color: #F7F7F7; font-size: 14px; font-weight: 400; text-decoration: none; font-family: 'Raleway', sans-serif; line-height: 50px;">Design & Builders List</a>
-      <a href="/community" style="color: #F7F7F7; font-size: 14px; font-weight: 400; text-decoration: none; font-family: 'Raleway', sans-serif; line-height: 50px;">Community</a>
-      <a href="/news" style="color: #F7F7F7; font-size: 14px; font-weight: 400; text-decoration: none; font-family: 'Raleway', sans-serif; line-height: 50px;">News & Media</a>
-      <a href="/about" style="color: #F7F7F7; font-size: 14px; font-weight: 400; text-decoration: none; font-family: 'Raleway', sans-serif; line-height: 50px;">About</a>
+  <!-- NAV -->
+<nav style="background:#1a1a1a;position:fixed;width:100%;top:0;z-index:50;">
+  <div style="padding:0 70px;height:50px;display:flex;align-items:center;gap:20px;">
+    <a href="/" style="color:#f7f7f7;font:400 14px Raleway,sans-serif;text-decoration:none;">Home</a>
+    <a href="/skateparks" style="color:#f7f7f7;font:400 14px Raleway,sans-serif;text-decoration:none;">Skateparks</a>
+    <a href="/resources" style="color:#f7f7f7;font:400 14px Raleway,sans-serif;text-decoration:none;">Resources</a>
+    <a href="/design-builders" style="color:#f7f7f7;font:400 14px Raleway,sans-serif;text-decoration:none;">Design & Builders List</a>
+    <a href="/community" style="color:#f7f7f7;font:400 14px Raleway,sans-serif;text-decoration:none;">Community</a>
+    <a href="/news" style="color:#f7f7f7;font:400 14px Raleway,sans-serif;text-decoration:none;">News & Media</a>
+    <a href="/about" style="color:#f7f7f7;font:400 14px Raleway,sans-serif;text-decoration:none;">About</a>
+    <!-- Social Icons -->
+    <div style="position:absolute;top:50%;right:60px;transform:translateY(-50%);display:flex;align-items:center;gap:16px;">
+  
+  <!-- Mini skateboard -->
+  <a href="https://www.utahskateparkadvocacygroup.com/" target="_blank" rel="noopener" style="display:flex;align-items:center;">
+    <img
+      src="/icon-mini.png"
+      alt="Utah Skatepark Advocacy Group"
+      style="width:16px;height:16px;display:block;"
+    />
+  </a>
+    <a href="https://www.instagram.com/goskateutah/" target="_blank" style="color:#fff;">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.facebook.com/goskateutah" target="_blank" style="color:#fff;">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+  </div>
+
     </div>
-    </div>
-    
-    <!-- Social Icons - Absolute positioned top right -->
-    <div style="position: absolute; top: 50%; right: 60px; transform: translateY(-50%); display: flex; align-items: center; gap: 16px;">
-      <a href="https://www.instagram.com/goskateutah/" target="_blank" rel="noopener" style="display: flex; align-items: center;">
-        <svg style="fill: white; width: 16px; height: 16px;" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-      </a>
-      <a href="https://www.facebook.com/goskateutah" target="_blank" rel="noopener" style="display: flex; align-items: center;">
-        <svg style="fill: white; width: 16px; height: 16px;" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-      </a>
-    </div>
-  </nav>
+</nav>
 
  <!-- Hero Section -->
 <section class="relative" style="margin-top: 50px; background-image: url('/hero-bg.jpg'); padding: 50px 0;">
@@ -164,36 +178,37 @@
 </section>
 
  <!-- Instagram Feed Section -->
-<section style="padding: 25px 0px; background: white;">
-  <div style="max-width: 1400px; margin: 0 auto;">
-    <h3 style="font-size: 36px; font-weight: 400; color: #1a1a1a; margin-bottom: 20px; text-align: center; font-family: 'Oswald', sans-serif;">
+<section style="padding: 100px 80px; background: white;">
+  <div style="max-width: 1600px; margin: 0 auto;">
+    <h3 style="font-size: 36px; font-weight: 400; color: #1a1a1a; margin-bottom: 60px; text-align: center; font-family: 'Oswald', sans-serif;">
       Follow us on Instagram 
       <a href="https://www.instagram.com/goskateutah" target="_blank" style="font-size: 36px; color: #3897f0; text-decoration: none; font-family: 'Oswald', sans-serif; margin-left: 8px;">
         @goskateutah
       </a>
     </h3>
     
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%;">
-      {#each instagramPosts as post}
-        <button
-          on:click={() => openPost(post)}
-          class="instagram-post"
-          style="border: none; padding: 0; background: #f0f0f0; cursor: pointer; position: relative; overflow: hidden; display: block; height: 400px;"
-        >
-          <img 
-            src={post.image} 
-            alt={post.title} 
-            style="width: 100%; height: 100%; object-fit: cover; display: block;"
-          />
-          <!-- Hover Overlay -->
-          <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0); transition: background 0.3s; display: flex; align-items: center; justify-content: center; padding: 24px;">
-            <div class="overlay-text" style="color: white; text-align: center; opacity: 0; transition: opacity 0.3s;">
-              <p style="font-weight: bold; font-size: 18px; font-family: 'Oswald', sans-serif; margin: 0;">{post.preview}</p>
-            </div>
-          </div>
-        </button>
-      {/each}
-    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; width: 100%;">
+  {#each instagramPosts as post}
+    <button
+      on:click={() => openPost(post)}
+      class="instagram-post"
+      style="border: none; padding: 0; background: #f0f0f0; cursor: pointer; position: relative; overflow: hidden; display: block; height: 500px;"
+    >
+      <img 
+        src={post.image} 
+        alt={post.title} 
+        style="width: 100%; height: 100%; object-fit: cover; display: block;"
+      />
+      <!-- Hover Overlay - Shows actual post content -->
+      <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0); transition: background 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; pointer-events: none; overflow: hidden;">
+        <div class="overlay-content" style="color: white; text-align: center; opacity: 0; transition: opacity 0.3s ease; max-height: 100%; overflow: hidden;">
+          <h4 style="font-weight: bold; font-size: 16px; font-family: 'Oswald', sans-serif; margin: 0 0 12px 0; text-transform: uppercase;">{post.title}</h4>
+          <p style="font-size: 14px; font-family: 'Oswald', sans-serif; margin: 0; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 8; -webkit-box-orient: vertical; overflow: hidden;">{post.preview}</p>
+        </div>
+      </div>
+    </button>
+  {/each}
+</div>
     
     <div class="text-center" style="margin-top: 40px;">
       <button style="color: #1a1a1a; font-weight: 400; border: 1px solid #d4d4d4; padding: 12px 28px; background: white; cursor: pointer; font-size: 14px; font-family: 'Oswald', sans-serif;">
@@ -204,8 +219,8 @@
 </section>
 
   <!-- Contact Form Section -->
-<section id="contact" style="padding: 80px 80px; background: #1a1a1a;">
-  <div style="max-width: 1100px; margin: 0 auto;">
+<section id="contact" style="padding: 20px 20px; background: #191919;">
+  <div style="max-width: 1000px; margin: 0 auto;">
     <h3 style="font-size: 36px; font-weight: 400; color: #FFC03A; margin-bottom: 10px; text-align: left; font-family: 'Oswald', sans-serif; text-transform: uppercase;">
       CONTACT US
     </h3>
@@ -223,29 +238,29 @@
       </p>
     </div>
     
-    <form style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+    <form style="display: flex; flex-direction: column; gap: 20px;">
       <div>
-        <label for="name" style="display: block; font-size: 14px; font-weight: 400; color: #F7F7F7; margin-bottom: 6px; font-family: 'Oswald', sans-serif;">Name *</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" style="width: 100%; padding: 10px 12px; border: 1px solid white; font-size: 14px; background: #2a2a2a; color: white; font-family: 'Oswald', sans-serif;" />
+        <label for="name" style="display: block; font-size: 14px; font-weight: 400; color: #F7F7F7; margin-bottom: 6px; font-family: 'raleway', sans-serif;">Name *</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" style="width: 100%; padding: 10px 12px; border: 1px solid white; font-size: 14px; background: #191919; color: white; font-family: 'raleway', sans-serif;" />
       </div>
       
       <div>
-        <label for="email" style="display: block; font-size: 14px; font-weight: 400; color: #F7F7F7; margin-bottom: 6px; font-family: 'Oswald', sans-serif;">Email *</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" style="width: 100%; padding: 10px 12px; border: 1px solid white; font-size: 14px; background: #2a2a2a; color: white; font-family: 'Oswald', sans-serif;" />
+        <label for="email" style="display: block; font-size: 14px; font-weight: 400; color: #F7F7F7; margin-bottom: 6px; font-family: 'raleway', sans-serif;">Email *</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" style="width: 100%; padding: 10px 12px; border: 1px solid white; font-size: 14px; background: #191919; color: white; font-family: 'raleway', sans-serif;" />
       </div>
       
-      <div style="grid-column: 1 / -1;">
-        <label for="subject" style="display: block; font-size: 14px; font-weight: 400; color: #F7F7F7; margin-bottom: 6px; font-family: 'Oswald', sans-serif;">Subject</label>
-        <input type="text" id="subject" name="subject" placeholder="Type the subject" style="width: 100%; padding: 10px 12px; border: 1px solid white; font-size: 14px; background: #2a2a2a; color: white; font-family: 'Oswald', sans-serif;" />
+      <div>
+        <label for="subject" style="display: block; font-size: 14px; font-weight: 400; color: #F7F7F7; margin-bottom: 6px; font-family: 'raleway', sans-serif;">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Type the subject" style="width: 100%; padding: 10px 12px; border: 1px solid white; font-size: 14px; background: #191919; color: white; font-family: 'raleway', sans-serif;" />
       </div>
       
-      <div style="grid-column: 1 / -1;">
-        <label for="message" style="display: block; font-size: 14px; font-weight: 400; color: #F7F7F7; margin-bottom: 6px; font-family: 'Oswald', sans-serif;">Message</label>
-        <textarea id="message" name="message" rows="4" placeholder="Type your message here..." style="width: 100%; padding: 10px 12px; border: 1px solid white; font-size: 14px; background: #2a2a2a; color: white; resize: vertical; font-family: 'Oswald', sans-serif;"></textarea>
+      <div>
+        <label for="message" style="display: block; font-size: 14px; font-weight: 400; color: #F7F7F7; margin-bottom: 6px; font-family: 'raleway', sans-serif;">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." style="width: 100%; padding: 10px 12px; border: 1px solid white; font-size: 14px; background: #191919; color: white; resize: vertical; font-family: 'raleway', sans-serif;"></textarea>
       </div>
       
-      <div style="grid-column: 1 / -1;">
-        <button type="submit" style="width: 100%; background: white; color: #1a1a1a; padding: 14px; font-size: 14px; font-weight: 400; border: none; cursor: pointer; font-family: 'Oswald', sans-serif;">
+      <div>
+        <button type="submit" style="width: 100%; background: white; color: #1a1a1a; padding: 14px; font-size: 14px; font-weight: 400; border: none; cursor: pointer; font-family: 'raleway', sans-serif;">
           Submit
         </button>
       </div>
@@ -356,5 +371,46 @@
   
   a:hover {
     opacity: 0.7;
+  }
+  
+  .instagram-post {
+    position: relative;
+  }
+  
+  .instagram-post .overlay {
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+  }
+  
+  .instagram-post:hover .overlay {
+    background: rgba(0, 0, 0, 0.6) !important;
+  }
+  
+  .instagram-post .overlay-content {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .instagram-post:hover .overlay-content {
+    opacity: 1 !important;
+  }
+  
+  /* Make placeholder text pure white */
+  input::placeholder,
+  textarea::placeholder {
+    color: white !important;
+    opacity: 1 !important;
+  }
+  
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    color: white !important;
+    opacity: 1 !important;
+  }
+  
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+    color: white !important;
+    opacity: 1 !important;
   }
 </style>
